@@ -1,0 +1,35 @@
+{
+  "name": "Focksake",
+  "tree": {
+    "$className": "DataModel",
+
+    "ReplicatedStorage": {
+      "Packages": {
+        "$path": "Packages"
+      },
+      "Shared": {
+        "$path": "src/shared"
+      },
+      "Vendor": {
+        "$path": "src/vendor"
+      }
+    },
+
+    "ServerScriptService": {
+      "Server": {
+       "$path": "src/server"
+      },
+      "Packages": {
+        "$path": "ServerPackages"
+      }
+    },
+
+    "StarterPlayer": {
+      "StarterPlayerScripts": {
+        "Client": {
+         "$path": "src/client"
+       }
+      }
+    }
+  }
+}
