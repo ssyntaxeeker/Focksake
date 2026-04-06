@@ -1,0 +1,7 @@
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+local Fusion = require(ReplicatedStorage.Packages.Fusion)
+
+local scope = Fusion:scoped()
+
+return scope:Value("Idle")

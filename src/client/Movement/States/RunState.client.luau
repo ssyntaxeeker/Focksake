@@ -1,11 +1,18 @@
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local StarterPlayer = game:GetService("StarterPlayer")
 
+local AddStaminaModifier = require(StarterPlayer.StarterPlayerScripts.Client.Stamina.Signals.AddStaminaModifier)
 local AnimationManager = require(StarterPlayer.StarterPlayerScripts.Client.Animations.Modules.AnimationManager)
+local Fusion = require(ReplicatedStorage.Packages.Fusion)
 local MovementConfig = require(StarterPlayer.StarterPlayerScripts.Client.Movement.Config.MovementConfig)
 local MovementContext = require(StarterPlayer.StarterPlayerScripts.Client.Movement.Modules.MovementContext)
+local PlayStepSound = require(StarterPlayer.StarterPlayerScripts.Client.Movement.Modules.PlayStepSound)
+local RemoveStaminaModifier = require(StarterPlayer.StarterPlayerScripts.Client.Stamina.Signals.RemoveStaminaModifier)
+local StaminaValue = require(StarterPlayer.StarterPlayerScripts.Client.Values.StaminaValue)
 local StateMachine = require(ReplicatedStorage.Shared.Util.StateMachine)
+local StatesRegistry = require(ReplicatedStorage.Shared.Util.StatesRegistry)
 local StepWalkspeed = require(StarterPlayer.StarterPlayerScripts.Client.Movement.Modules.StepWalkspeed)
+local TryStopMovingSuddenly = require(StarterPlayer.StarterPlayerScripts.Client.Movement.Modules.TryStopMovingSuddenly)
 
 local Animations = ReplicatedStorage.Assets.Animations
 
@@ -13,7 +20,6 @@ local SPEED_TARGET = MovementConfig.RUN_SPEED_TARGET
 local ACCELERATION = MovementConfig.RUN_SPEED_ACCELERATION
 
 local runAnimation = Animations.Player.Run
-local stopRunAnimation = Animations.Player.StopRun
 
 local state: StateMachine.BaseState<string, MovementContext.Context> = {
 	id = "Run",
@@ -22,26 +28,29 @@ local state: StateMachine.BaseState<string, MovementContext.Context> = {
 		local humanoid = ctx.humanoid
 
 		local runTrack = AnimationManager.GetTrack(humanoid.Animator, runAnimation)
-		if runTrack.IsPlaying then return end
+
+		ctx.janitor:Add(
+			runTrack:GetMarkerReachedSignal("Step"):Connect(function()
+				PlayStepSound(humanoid)
+			end),
+			"Disconnect"
+		)
 
 		runTrack:Play(0.4)
+		AddStaminaModifier:Fire("Running")
 	end,
 
 	ExitState = function(ctx: MovementContext.Context)
 		local humanoid = ctx.humanoid
-		local rootPart = humanoid.RootPart
 
 		local runTrack = AnimationManager.GetTrack(humanoid.Animator, runAnimation)
 		runTrack:Stop(0.3)
 
-		if humanoid.MoveDirection.Magnitude == 0 then
-			local speedFactor = math.clamp(humanoid.WalkSpeed / SPEED_TARGET, 0, 1)
-			ctx.momentum = rootPart.AssemblyLinearVelocity
+		TryStopMovingSuddenly(ctx, SPEED_TARGET)
 
-			local stopRunTrack = AnimationManager.GetTrack(humanoid.Animator, stopRunAnimation)
-			stopRunTrack:AdjustSpeed(4.5 + (2.75 - 4.5) * speedFactor) -- this is just lerp, at 0 speed factor it returns 4.5, at 1 it returns 2.75
-			stopRunTrack:Play(0.1, 0.15)
-		end
+		RemoveStaminaModifier:Fire("Running")
+
+		ctx.janitor:Cleanup()
 	end,
 
 	UpdateState = function(ctx: MovementContext.Context, deltaTime: number)
@@ -51,21 +60,20 @@ local state: StateMachine.BaseState<string, MovementContext.Context> = {
 		local weightAlpha = math.clamp(humanoid.WalkSpeed / SPEED_TARGET, 0, 1)
 		local runTrack = AnimationManager.GetTrack(humanoid.Animator, runAnimation)
 		runTrack:AdjustWeight(weightAlpha, 0.1)
+		runTrack:AdjustSpeed(humanoid.WalkSpeed / SPEED_TARGET)
 	end,
 
 	GetNextState = function(ctx: MovementContext.Context)
 		local humanoid = ctx.humanoid
 		local moveDirection = humanoid.MoveDirection
-		local walkSpeed = humanoid.WalkSpeed
 
 		if moveDirection.Magnitude > 0 then
-			if walkSpeed >= MovementConfig.MIN_RUN_SPEED then return end
-
-			return "Walk"
+			if Fusion.peek(StaminaValue) == 0 then return "Walk" end
 		else
 			return "Idle"
 		end
+		return
 	end,
 }
 
-return state
+StatesRegistry.RegisterState("Movement", state)

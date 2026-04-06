@@ -5,32 +5,33 @@ local AnimationManager = require(StarterPlayer.StarterPlayerScripts.Client.Anima
 local MovementConfig = require(StarterPlayer.StarterPlayerScripts.Client.Movement.Config.MovementConfig)
 local MovementContext = require(StarterPlayer.StarterPlayerScripts.Client.Movement.Modules.MovementContext)
 local StateMachine = require(ReplicatedStorage.Shared.Util.StateMachine)
+local StatesRegistry = require(ReplicatedStorage.Shared.Util.StatesRegistry)
 local StepWalkspeed = require(StarterPlayer.StarterPlayerScripts.Client.Movement.Modules.StepWalkspeed)
 
 local Animations = ReplicatedStorage.Assets.Animations
 
-local SPEED_TARGET = MovementConfig.WALK_SPEED_TARGET
-local ACCELERATION = MovementConfig.WALK_SPEED_ACCELERATION
+local SPEED_TARGET = MovementConfig.IDLE_SPEED_TARGET
+local ACCELERATION = MovementConfig.IDLE_SPEED_ACCELERATION
 
-local walkAnimation = Animations.Player.Walk
+local crouchIdleAnimation = Animations.Player.CrouchIdle
 
 local state: StateMachine.BaseState<string, MovementContext.Context> = {
-	id = "Walk",
+	id = "IdleCrouch",
 
 	EnterState = function(ctx: MovementContext.Context)
 		local humanoid = ctx.humanoid
 
-		local walkTrack = AnimationManager.GetTrack(humanoid.Animator, walkAnimation)
-		if walkTrack.IsPlaying then return end
-
-		walkTrack:Play(0.3)
+		local idleTrack = AnimationManager.GetTrack(humanoid.Animator, crouchIdleAnimation)
+		idleTrack:Play(0.2)
 	end,
 
 	ExitState = function(ctx: MovementContext.Context)
 		local humanoid = ctx.humanoid
 
-		local walkTrack = AnimationManager.GetTrack(humanoid.Animator, walkAnimation)
-		walkTrack:Stop(0.4)
+		local idleTrack = AnimationManager.GetTrack(humanoid.Animator, crouchIdleAnimation)
+		idleTrack:Stop(0.2)
+
+		ctx.janitor:Cleanup()
 	end,
 
 	UpdateState = function(ctx: MovementContext.Context, deltaTime: number)
@@ -41,18 +42,10 @@ local state: StateMachine.BaseState<string, MovementContext.Context> = {
 	GetNextState = function(ctx: MovementContext.Context)
 		local humanoid = ctx.humanoid
 		local moveDirection = humanoid.MoveDirection
-		local walkSpeed = humanoid.WalkSpeed
 
-		if moveDirection.Magnitude > 0 then
-			if walkSpeed >= MovementConfig.MIN_RUN_SPEED then
-				return "Run"
-			else
-				return
-			end
-		else
-			return "Idle"
-		end
+		if moveDirection.Magnitude > 0 then return "WalkCrouch" end
+		return
 	end,
 }
 
-return state
+StatesRegistry.RegisterState("Movement", state)

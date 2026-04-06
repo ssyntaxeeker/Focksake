@@ -4,68 +4,63 @@ local StarterPlayer = game:GetService("StarterPlayer")
 local AnimationManager = require(StarterPlayer.StarterPlayerScripts.Client.Animations.Modules.AnimationManager)
 local MovementConfig = require(StarterPlayer.StarterPlayerScripts.Client.Movement.Config.MovementConfig)
 local MovementContext = require(StarterPlayer.StarterPlayerScripts.Client.Movement.Modules.MovementContext)
+local PlayStepSound = require(StarterPlayer.StarterPlayerScripts.Client.Movement.Modules.PlayStepSound)
 local StateMachine = require(ReplicatedStorage.Shared.Util.StateMachine)
+local StatesRegistry = require(ReplicatedStorage.Shared.Util.StatesRegistry)
 local StepWalkspeed = require(StarterPlayer.StarterPlayerScripts.Client.Movement.Modules.StepWalkspeed)
+local TryStopMovingSuddenly = require(StarterPlayer.StarterPlayerScripts.Client.Movement.Modules.TryStopMovingSuddenly)
 
 local Animations = ReplicatedStorage.Assets.Animations
 
-local SPEED_TARGET = MovementConfig.IDLE_SPEED_TARGET
-local ACCELERATION = MovementConfig.IDLE_SPEED_ACCELERATION
+local SPEED_TARGET = MovementConfig.WALK_SPEED_TARGET
+local ACCELERATION = MovementConfig.WALK_SPEED_ACCELERATION
 
-local idleAnimation = Animations.Player.Idle
+local walkAnimation = Animations.Player.Walk
 
 local state: StateMachine.BaseState<string, MovementContext.Context> = {
-	id = "Idle",
+	id = "Walk",
 
 	EnterState = function(ctx: MovementContext.Context)
 		local humanoid = ctx.humanoid
 
-		local idleTrack = AnimationManager.GetTrack(humanoid.Animator, idleAnimation)
-		idleTrack:Play(0.2)
+		local walkTrack = AnimationManager.GetTrack(humanoid.Animator, walkAnimation)
+
+		ctx.janitor:Add(
+			walkTrack:GetMarkerReachedSignal("Step"):Connect(function()
+				PlayStepSound(humanoid)
+			end),
+			"Disconnect"
+		)
+
+		walkTrack:Play(0.3)
 	end,
 
 	ExitState = function(ctx: MovementContext.Context)
 		local humanoid = ctx.humanoid
 
-		local idleTrack = AnimationManager.GetTrack(humanoid.Animator, idleAnimation)
-		idleTrack:Stop(0.4)
+		local walkTrack = AnimationManager.GetTrack(humanoid.Animator, walkAnimation)
+		walkTrack:Stop(0.2)
+
+		TryStopMovingSuddenly(ctx, SPEED_TARGET)
+
+		ctx.janitor:Cleanup()
 	end,
 
 	UpdateState = function(ctx: MovementContext.Context, deltaTime: number)
 		local humanoid = ctx.humanoid
 		humanoid.WalkSpeed = StepWalkspeed(humanoid.WalkSpeed, SPEED_TARGET, ACCELERATION, deltaTime)
 
-		local weightAlpha = math.clamp(humanoid.WalkSpeed / MovementConfig.WALK_SPEED_TARGET, 0, 1)
-		local idleTrack = AnimationManager.GetTrack(humanoid.Animator, idleAnimation)
-		idleTrack:AdjustWeight(1 - weightAlpha, 0.15)
-
-		local rootPart = humanoid.RootPart
-		if ctx.momentum then
-			local decay = math.exp(-7.3 * deltaTime)
-			ctx.momentum *= decay
-
-			local horizontal = Vector3.new(ctx.momentum.X, 0, ctx.momentum.Z)
-			if horizontal.Magnitude < 0.1 then ctx.momentum = nil end
-
-			rootPart.AssemblyLinearVelocity = Vector3.new(rootPart.AssemblyLinearVelocity.Y, 0, rootPart.AssemblyLinearVelocity.Z) + horizontal
-		end
+		local walkTrack = AnimationManager.GetTrack(humanoid.Animator, walkAnimation)
+		walkTrack:AdjustSpeed(humanoid.WalkSpeed / SPEED_TARGET)
 	end,
 
 	GetNextState = function(ctx: MovementContext.Context)
 		local humanoid = ctx.humanoid
 		local moveDirection = humanoid.MoveDirection
-		local walkSpeed = humanoid.WalkSpeed
 
-		if moveDirection.Magnitude > 0 then
-			if walkSpeed >= MovementConfig.MIN_RUN_SPEED then
-				return "Run"
-			else
-				return "Walk"
-			end
-		end
-
+		if moveDirection.Magnitude <= 0 then return "Idle" end
 		return
 	end,
 }
 
-return state
+StatesRegistry.RegisterState("Movement", state)
