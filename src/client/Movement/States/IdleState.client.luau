@@ -17,17 +17,25 @@ local MOMENTUM_CUTOFF = MovementConfig.MOMENTUM_MIN_THRESHOLD
 
 local idleAnimation = Animations.Player.Idle
 
+local function getNextState(ctx)
+	local humanoid = ctx.humanoid
+	local moveDirection = humanoid.MoveDirection
+
+	if moveDirection.Magnitude > 0 then return "Walk" end
+	return
+end
+
 local state: StateMachine.BaseState<string, MovementContext.Context> = {
 	id = "Idle",
 
-	EnterState = function(ctx: MovementContext.Context)
+	Enter = function(ctx: MovementContext.Context)
 		local humanoid = ctx.humanoid
 
 		local idleTrack = AnimationManager.GetTrack(humanoid.Animator, idleAnimation)
 		idleTrack:Play(0.2)
 	end,
 
-	ExitState = function(ctx: MovementContext.Context)
+	Exit = function(ctx: MovementContext.Context)
 		local humanoid = ctx.humanoid
 
 		local idleTrack = AnimationManager.GetTrack(humanoid.Animator, idleAnimation)
@@ -36,7 +44,13 @@ local state: StateMachine.BaseState<string, MovementContext.Context> = {
 		ctx.janitor:Cleanup()
 	end,
 
-	UpdateState = function(ctx: MovementContext.Context, deltaTime: number)
+	Update = function(ctx: MovementContext.Context, deltaTime: number)
+		local nextState = getNextState(ctx)
+		if nextState then
+			ctx.transition(nextState)
+			return
+		end
+
 		local humanoid = ctx.humanoid
 		humanoid.WalkSpeed = StepWalkspeed(humanoid.WalkSpeed, SPEED_TARGET, ACCELERATION, deltaTime)
 
@@ -57,14 +71,6 @@ local state: StateMachine.BaseState<string, MovementContext.Context> = {
 				rootPart.AssemblyLinearVelocity = Vector3.new(velocity.X, 0, velocity.Z) + horizontalMomentum
 			end
 		end
-	end,
-
-	GetNextState = function(ctx: MovementContext.Context)
-		local humanoid = ctx.humanoid
-		local moveDirection = humanoid.MoveDirection
-
-		if moveDirection.Magnitude > 0 then return "Walk" end
-		return
 	end,
 }
 

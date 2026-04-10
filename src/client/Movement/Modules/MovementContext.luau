@@ -5,6 +5,8 @@ local Janitor = require(ReplicatedStorage.Packages.Janitor)
 export type Context = {
 	humanoid: Humanoid?,
 	momentum: Vector3?,
+
+	transition: (stateName: string) -> string?,
 	janitor: typeof(Janitor.new()),
 }
 

@@ -1,0 +1,3 @@
+return {
+	INTERMISSION_DURATION = 20,
+}

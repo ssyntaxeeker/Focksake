@@ -15,17 +15,25 @@ local ACCELERATION = MovementConfig.IDLE_SPEED_ACCELERATION
 
 local crouchIdleAnimation = Animations.Player.CrouchIdle
 
+local function getNextState(ctx)
+	local humanoid = ctx.humanoid
+	local moveDirection = humanoid.MoveDirection
+
+	if moveDirection.Magnitude > 0 then return "WalkCrouch" end
+	return
+end
+
 local state: StateMachine.BaseState<string, MovementContext.Context> = {
 	id = "IdleCrouch",
 
-	EnterState = function(ctx: MovementContext.Context)
+	Enter = function(ctx: MovementContext.Context)
 		local humanoid = ctx.humanoid
 
 		local idleTrack = AnimationManager.GetTrack(humanoid.Animator, crouchIdleAnimation)
 		idleTrack:Play(0.2)
 	end,
 
-	ExitState = function(ctx: MovementContext.Context)
+	Exit = function(ctx: MovementContext.Context)
 		local humanoid = ctx.humanoid
 
 		local idleTrack = AnimationManager.GetTrack(humanoid.Animator, crouchIdleAnimation)
@@ -34,17 +42,15 @@ local state: StateMachine.BaseState<string, MovementContext.Context> = {
 		ctx.janitor:Cleanup()
 	end,
 
-	UpdateState = function(ctx: MovementContext.Context, deltaTime: number)
+	Update = function(ctx: MovementContext.Context, deltaTime: number)
+		local nextState = getNextState(ctx)
+		if nextState then
+			ctx.transition(nextState)
+			return
+		end
+
 		local humanoid = ctx.humanoid
 		humanoid.WalkSpeed = StepWalkspeed(humanoid.WalkSpeed, SPEED_TARGET, ACCELERATION, deltaTime)
-	end,
-
-	GetNextState = function(ctx: MovementContext.Context)
-		local humanoid = ctx.humanoid
-		local moveDirection = humanoid.MoveDirection
-
-		if moveDirection.Magnitude > 0 then return "WalkCrouch" end
-		return
 	end,
 }
 

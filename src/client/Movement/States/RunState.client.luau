@@ -21,10 +21,22 @@ local ACCELERATION = MovementConfig.RUN_SPEED_ACCELERATION
 
 local runAnimation = Animations.Player.Run
 
+local function getNextState(ctx)
+	local humanoid = ctx.humanoid
+	local moveDirection = humanoid.MoveDirection
+
+	if moveDirection.Magnitude > 0 then
+		if Fusion.peek(StaminaValue) == 0 then return "Walk" end
+	else
+		return "Idle"
+	end
+	return
+end
+
 local state: StateMachine.BaseState<string, MovementContext.Context> = {
 	id = "Run",
 
-	EnterState = function(ctx: MovementContext.Context)
+	Enter = function(ctx: MovementContext.Context)
 		local humanoid = ctx.humanoid
 
 		local runTrack = AnimationManager.GetTrack(humanoid.Animator, runAnimation)
@@ -40,7 +52,7 @@ local state: StateMachine.BaseState<string, MovementContext.Context> = {
 		AddStaminaModifier:Fire("Running")
 	end,
 
-	ExitState = function(ctx: MovementContext.Context)
+	Exit = function(ctx: MovementContext.Context)
 		local humanoid = ctx.humanoid
 
 		local runTrack = AnimationManager.GetTrack(humanoid.Animator, runAnimation)
@@ -53,7 +65,13 @@ local state: StateMachine.BaseState<string, MovementContext.Context> = {
 		ctx.janitor:Cleanup()
 	end,
 
-	UpdateState = function(ctx: MovementContext.Context, deltaTime: number)
+	Update = function(ctx: MovementContext.Context, deltaTime: number)
+		local nextState = getNextState(ctx)
+		if nextState then
+			ctx.transition(nextState)
+			return
+		end
+
 		local humanoid = ctx.humanoid
 		humanoid.WalkSpeed = StepWalkspeed(humanoid.WalkSpeed, SPEED_TARGET, ACCELERATION, deltaTime)
 
@@ -61,18 +79,6 @@ local state: StateMachine.BaseState<string, MovementContext.Context> = {
 		local runTrack = AnimationManager.GetTrack(humanoid.Animator, runAnimation)
 		runTrack:AdjustWeight(weightAlpha, 0.1)
 		runTrack:AdjustSpeed(humanoid.WalkSpeed / SPEED_TARGET)
-	end,
-
-	GetNextState = function(ctx: MovementContext.Context)
-		local humanoid = ctx.humanoid
-		local moveDirection = humanoid.MoveDirection
-
-		if moveDirection.Magnitude > 0 then
-			if Fusion.peek(StaminaValue) == 0 then return "Walk" end
-		else
-			return "Idle"
-		end
-		return
 	end,
 }
 
