@@ -14,7 +14,6 @@ local Animations = ReplicatedStorage.Assets.Animations
 local SPEED_TARGET = MovementConfig.CROUCH_SPEED_TARGET
 local ACCELERATION = MovementConfig.CROUCH_SPEED_ACCELERATION
 
-local crouchIdleAnimation = Animations.Player.CrouchIdle
 local crouchWalkAnimation = Animations.Player.CrouchWalk
 
 local function getNextState(ctx)
@@ -30,33 +29,24 @@ local state: StateMachine.BaseState<string, MovementContext.Context> = {
 
 	Enter = function(ctx: MovementContext.Context)
 		local humanoid = ctx.humanoid
-		local isMoving = humanoid.MoveDirection.Magnitude > 0
+		local walkTrack = AnimationManager.GetTrack(humanoid.Animator, crouchWalkAnimation)
 
-		if isMoving then
-			local walkTrack = AnimationManager.GetTrack(humanoid.Animator, crouchWalkAnimation)
+		ctx.janitor:Add(
+			walkTrack:GetMarkerReachedSignal("Step"):Connect(function()
+				PlayStepSound(humanoid)
+			end),
+			"Disconnect"
+		)
 
-			ctx.janitor:Add(
-				walkTrack:GetMarkerReachedSignal("Step"):Connect(function()
-					PlayStepSound(humanoid)
-				end),
-				"Disconnect"
-			)
-
-			walkTrack:Play(0.3)
-		else
-			local idleTrack = AnimationManager.GetTrack(humanoid.Animator, crouchIdleAnimation)
-			idleTrack:Play(0.2)
-		end
+		walkTrack:Play(0.3)
 	end,
 
 	Exit = function(ctx: MovementContext.Context)
 		local humanoid = ctx.humanoid
 
-		local idleTrack = AnimationManager.GetTrack(humanoid.Animator, crouchIdleAnimation)
-		idleTrack:Stop(0.2)
-
 		local walkTrack = AnimationManager.GetTrack(humanoid.Animator, crouchWalkAnimation)
 		walkTrack:Stop(0.2)
+		-- if switching to crouch idle then just adjust speed to 0 instead
 
 		ctx.janitor:Cleanup()
 	end,

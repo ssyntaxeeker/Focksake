@@ -1,6 +1,7 @@
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local ServerScriptService = game:GetService("ServerScriptService")
 
+local CleanUpMatch = require(ServerScriptService.Server.Core.Modules.CleanUpMatch)
 local CoreStatesConfig = require(ServerScriptService.Server.Core.Config.CoreStatesConfig)
 local StatesRegistry = require(ReplicatedStorage.Shared.Util.StatesRegistry)
 
@@ -17,6 +18,7 @@ local state = {
 		print("[Core States] Entered Intermission")
 
 		ctx.timer = 0
+		CleanUpMatch(ctx) -- reloads players' characters and cleans ctx.match
 	end,
 
 	Exit = function(_ctx)

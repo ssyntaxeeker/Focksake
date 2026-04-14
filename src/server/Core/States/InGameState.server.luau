@@ -14,8 +14,7 @@ local state = {
 	Enter = function(ctx)
 		print("[Core States] Match started")
 
-		ctx.inGameStates = StatesRegistry.ReturnStates("ClassicGamemode")
-		ctx.inGameMachine = StateMachine.Create("WaitingForPlayers", ctx.inGameStates, ctx)
+		ctx.inGameMachine = StateMachine.Create("Start", StatesRegistry.ReturnStates("ClassicGamemode"), ctx)
 	end,
 
 	Exit = function(ctx)
