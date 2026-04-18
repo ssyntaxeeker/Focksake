@@ -25,5 +25,7 @@ return function(ctx, config)
 		table.insert(ctx.match.killers, player)
 	end
 
+	ctx.nextChestId = 1
+
 	ctx.match.timer = 0
 end

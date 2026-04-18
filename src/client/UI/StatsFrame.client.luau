@@ -14,27 +14,30 @@ local statsFrame = inGameHUD.StatsFrame
 
 local scope = Fusion:scoped()
 
-local staminaBar = statsFrame.StaminaBar
+-- STAMINA BAR
+do
+	local staminaBar = statsFrame.StaminaBar
 
-local function updateStamina()
-	local stamina = Fusion.peek(StaminaValue)
-	local percent = math.clamp(stamina / 100, 0, 1)
+	local function updateStamina()
+		local stamina = Fusion.peek(StaminaValue)
+		local percent = math.clamp(stamina / 100, 0, 1)
 
-	local transparencySequence
+		local transparencySequence
 
-	if percent >= 1 then
-		transparencySequence = NumberSequence.new(0)
-	else
-		transparencySequence = NumberSequence.new {
-			NumberSequenceKeypoint.new(0, 0),
-			NumberSequenceKeypoint.new(percent, 0),
-			NumberSequenceKeypoint.new(math.min(percent + 0.001, 1), 1),
-			NumberSequenceKeypoint.new(1, 1),
-		}
+		if percent >= 1 then
+			transparencySequence = NumberSequence.new(0)
+		else
+			transparencySequence = NumberSequence.new {
+				NumberSequenceKeypoint.new(0, 0),
+				NumberSequenceKeypoint.new(percent, 0),
+				NumberSequenceKeypoint.new(math.min(percent + 0.001, 1), 1),
+				NumberSequenceKeypoint.new(1, 1),
+			}
+		end
+
+		staminaBar.CanvasGroup.Fill.UIGradient.Transparency = transparencySequence
+		staminaBar.StaminaAmount.Text = `{math.floor(stamina)}/100`
 	end
 
-	staminaBar.CanvasGroup.Fill.UIGradient.Transparency = transparencySequence
-	staminaBar.StaminaAmount.Text = `{math.floor(stamina)}/100`
+	scope:Observer(StaminaValue):onBind(updateStamina)
 end
-
-scope:Observer(StaminaValue):onBind(updateStamina)

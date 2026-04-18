@@ -4,6 +4,7 @@ local ServerScriptService = game:GetService("ServerScriptService")
 local CurrentMap = require(ServerScriptService.Server.Maps.Values.CurrentMap)
 local Fusion = require(ReplicatedStorage.Packages.Fusion)
 local SafePivotCharactersAsync = require(ReplicatedStorage.Vendor.SafePivotCharactersAsync)
+local SpawnsEnums = require(ReplicatedStorage.Shared.Enums.SpawnsEnums)
 
 return function(ctx)
 	local mapModel = Fusion.peek(CurrentMap)
@@ -13,9 +14,9 @@ return function(ctx)
 	local killerCFrames = {}
 
 	for _, spawnPart in spawnsFolder:GetChildren() do
-		if spawnPart:HasTag("Survivor") then
+		if spawnPart:HasTag(SpawnsEnums.SURVIVOR_TAG) then
 			table.insert(survivorCFrames, spawnPart.CFrame)
-		elseif spawnPart:HasTag("Killer") then
+		elseif spawnPart:HasTag(SpawnsEnums.KILLER_TAG) then
 			table.insert(killerCFrames, spawnPart.CFrame)
 		end
 	end

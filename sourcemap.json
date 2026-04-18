@@ -1,1 +1,1646 @@
-{"name":"Focksake","className":"DataModel","filePaths":["default.project.json"],"children":[{"name":"ReplicatedStorage","className":"ReplicatedStorage","children":[{"name":"Packages","className":"Folder","children":[{"name":"Fusion","className":"ModuleScript","filePaths":["Packages/Fusion.lua"]},{"name":"Janitor","className":"ModuleScript","filePaths":["Packages/Janitor.lua"]},{"name":"Net","className":"ModuleScript","filePaths":["Packages/Net.lua"]},{"name":"Observers","className":"ModuleScript","filePaths":["Packages/Observers.lua"]},{"name":"Promise","className":"ModuleScript","filePaths":["Packages/Promise.lua"]},{"name":"Signal","className":"ModuleScript","filePaths":["Packages/Signal.lua"]},{"name":"_Index","className":"Folder","children":[{"name":"elttob_fusion@0.3.0","className":"Folder","children":[{"name":"fusion","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/init.luau","Packages/_Index/elttob_fusion@0.3.0/fusion/default.project.json"],"children":[{"name":"Animation","className":"Folder","children":[{"name":"ExternalTime","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Animation/ExternalTime.luau"]},{"name":"Spring","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Animation/Spring.luau"]},{"name":"Stopwatch","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Animation/Stopwatch.luau"]},{"name":"Tween","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Animation/Tween.luau"]},{"name":"getTweenDuration","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Animation/getTweenDuration.luau"]},{"name":"getTweenRatio","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Animation/getTweenRatio.luau"]},{"name":"lerpType","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Animation/lerpType.luau"]},{"name":"packType","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Animation/packType.luau"]},{"name":"springCoefficients","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Animation/springCoefficients.luau"]},{"name":"unpackType","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Animation/unpackType.luau"]}]},{"name":"Colour","className":"Folder","children":[{"name":"Oklab","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Colour/Oklab.luau"]},{"name":"sRGB","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Colour/sRGB.luau"]}]},{"name":"External","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/External.luau"]},{"name":"ExternalDebug","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/ExternalDebug.luau"]},{"name":"Graph","className":"Folder","children":[{"name":"Observer","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Graph/Observer.luau"]},{"name":"castToGraph","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Graph/castToGraph.luau"]},{"name":"change","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Graph/change.luau"]},{"name":"depend","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Graph/depend.luau"]},{"name":"evaluate","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Graph/evaluate.luau"]}]},{"name":"Instances","className":"Folder","children":[{"name":"Attribute","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Instances/Attribute.luau"]},{"name":"AttributeChange","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Instances/AttributeChange.luau"]},{"name":"AttributeOut","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Instances/AttributeOut.luau"]},{"name":"Child","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Instances/Child.luau"]},{"name":"Children","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Instances/Children.luau"]},{"name":"Hydrate","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Instances/Hydrate.luau"]},{"name":"New","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Instances/New.luau"]},{"name":"OnChange","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Instances/OnChange.luau"]},{"name":"OnEvent","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Instances/OnEvent.luau"]},{"name":"Out","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Instances/Out.luau"]},{"name":"applyInstanceProps","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Instances/applyInstanceProps.luau"]},{"name":"defaultProps","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Instances/defaultProps.luau"]}]},{"name":"Logging","className":"Folder","children":[{"name":"formatError","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Logging/formatError.luau"]},{"name":"messages","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Logging/messages.luau"]},{"name":"parseError","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Logging/parseError.luau"]}]},{"name":"Memory","className":"Folder","children":[{"name":"checkLifetime","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Memory/checkLifetime.luau"]},{"name":"deriveScope","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Memory/deriveScope.luau"]},{"name":"deriveScopeImpl","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Memory/deriveScopeImpl.luau"]},{"name":"doCleanup","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Memory/doCleanup.luau"]},{"name":"innerScope","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Memory/innerScope.luau"]},{"name":"legacyCleanup","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Memory/legacyCleanup.luau"]},{"name":"needsDestruction","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Memory/needsDestruction.luau"]},{"name":"poisonScope","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Memory/poisonScope.luau"]},{"name":"scopePool","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Memory/scopePool.luau"]},{"name":"scoped","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Memory/scoped.luau"]},{"name":"whichLivesLonger","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Memory/whichLivesLonger.luau"]}]},{"name":"RobloxExternal","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/RobloxExternal.luau"]},{"name":"State","className":"Folder","children":[{"name":"Computed","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/State/Computed.luau"]},{"name":"For","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/State/For/init.luau"],"children":[{"name":"Disassembly","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/State/For/Disassembly.luau"]},{"name":"ForTypes","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/State/For/ForTypes.luau"]}]},{"name":"ForKeys","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/State/ForKeys.luau"]},{"name":"ForPairs","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/State/ForPairs.luau"]},{"name":"ForValues","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/State/ForValues.luau"]},{"name":"Value","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/State/Value.luau"]},{"name":"castToState","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/State/castToState.luau"]},{"name":"peek","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/State/peek.luau"]},{"name":"updateAll","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/State/updateAll.luau"]}]},{"name":"Types","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Types.luau"]},{"name":"Utility","className":"Folder","children":[{"name":"Contextual","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Utility/Contextual.luau"]},{"name":"Safe","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Utility/Safe.luau"]},{"name":"isSimilar","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Utility/isSimilar.luau"]},{"name":"merge","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Utility/merge.luau"]},{"name":"nameOf","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Utility/nameOf.luau"]},{"name":"never","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Utility/never.luau"]},{"name":"nicknames","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Utility/nicknames.luau"]},{"name":"xtypeof","className":"ModuleScript","filePaths":["Packages/_Index/elttob_fusion@0.3.0/fusion/src/Utility/xtypeof.luau"]}]}]}]},{"name":"evaera_promise@4.0.0","className":"Folder","children":[{"name":"promise","className":"ModuleScript","filePaths":["Packages/_Index/evaera_promise@4.0.0/promise/lib/init.lua","Packages/_Index/evaera_promise@4.0.0/promise/default.project.json"],"children":[{"name":"init.spec","className":"ModuleScript","filePaths":["Packages/_Index/evaera_promise@4.0.0/promise/lib/init.spec.lua"]}]}]},{"name":"howmanysmall_janitor@1.18.3","className":"Folder","children":[{"name":"Promise","className":"ModuleScript","filePaths":["Packages/_Index/howmanysmall_janitor@1.18.3/Promise.lua"]},{"name":"janitor","className":"ModuleScript","filePaths":["Packages/_Index/howmanysmall_janitor@1.18.3/janitor/src/init.luau","Packages/_Index/howmanysmall_janitor@1.18.3/janitor/default.project.json"],"children":[{"name":"FastDefer","className":"ModuleScript","filePaths":["Packages/_Index/howmanysmall_janitor@1.18.3/janitor/src/FastDefer.luau"]},{"name":"Promise","className":"ModuleScript","filePaths":["Packages/_Index/howmanysmall_janitor@1.18.3/janitor/src/Promise.luau"]},{"name":"__tests__","className":"Folder","children":[{"name":"Janitor.test","className":"ModuleScript","filePaths":["Packages/_Index/howmanysmall_janitor@1.18.3/janitor/src/__tests__/Janitor.test.luau"]}]},{"name":"jest.config","className":"ModuleScript","filePaths":["Packages/_Index/howmanysmall_janitor@1.18.3/janitor/src/jest.config.luau"]}]}]},{"name":"howmanysmall_typed-promise@4.0.6","className":"Folder","children":[{"name":"Promise","className":"ModuleScript","filePaths":["Packages/_Index/howmanysmall_typed-promise@4.0.6/Promise.lua"]},{"name":"typed-promise","className":"ModuleScript","filePaths":["Packages/_Index/howmanysmall_typed-promise@4.0.6/typed-promise/src/init.luau","Packages/_Index/howmanysmall_typed-promise@4.0.6/typed-promise/default.project.json"]}]},{"name":"sleitnick_net@0.2.0","className":"Folder","children":[{"name":"net","className":"ModuleScript","filePaths":["Packages/_Index/sleitnick_net@0.2.0/net/init.lua"],"children":[{"name":"wally","className":"ModuleScript","filePaths":["Packages/_Index/sleitnick_net@0.2.0/net/wally.toml"]}]}]},{"name":"sleitnick_observers@0.4.0","className":"Folder","children":[{"name":"observers","className":"ModuleScript","filePaths":["Packages/_Index/sleitnick_observers@0.4.0/observers/lib/init.luau","Packages/_Index/sleitnick_observers@0.4.0/observers/default.project.json"],"children":[{"name":"observeAttribute","className":"ModuleScript","filePaths":["Packages/_Index/sleitnick_observers@0.4.0/observers/lib/observeAttribute.luau"]},{"name":"observeCharacter","className":"ModuleScript","filePaths":["Packages/_Index/sleitnick_observers@0.4.0/observers/lib/observeCharacter.luau"]},{"name":"observeLocalCharacter","className":"ModuleScript","filePaths":["Packages/_Index/sleitnick_observers@0.4.0/observers/lib/observeLocalCharacter.luau"]},{"name":"observePlayer","className":"ModuleScript","filePaths":["Packages/_Index/sleitnick_observers@0.4.0/observers/lib/observePlayer.luau"]},{"name":"observeProperty","className":"ModuleScript","filePaths":["Packages/_Index/sleitnick_observers@0.4.0/observers/lib/observeProperty.luau"]},{"name":"observeTag","className":"ModuleScript","filePaths":["Packages/_Index/sleitnick_observers@0.4.0/observers/lib/observeTag.luau"]}]}]},{"name":"sleitnick_signal@2.0.3","className":"Folder","children":[{"name":"signal","className":"ModuleScript","filePaths":["Packages/_Index/sleitnick_signal@2.0.3/signal/init.luau"],"children":[{"name":"init.test","className":"ModuleScript","filePaths":["Packages/_Index/sleitnick_signal@2.0.3/signal/init.test.luau"]},{"name":"wally","className":"ModuleScript","filePaths":["Packages/_Index/sleitnick_signal@2.0.3/signal/wally.toml"]}]}]}]}]},{"name":"Shared","className":"Folder","children":[{"name":"Util","className":"Folder","children":[{"name":"StateMachine","className":"ModuleScript","filePaths":["src/shared/Util/StateMachine.luau"]},{"name":"StatesRegistry","className":"ModuleScript","filePaths":["src/shared/Util/StatesRegistry.luau"]}]}]},{"name":"Vendor","className":"Folder","children":[{"name":"Fusion","className":"Folder","children":[{"name":"trackValues","className":"ModuleScript","filePaths":["src/vendor/Fusion/trackValues.luau"]},{"name":"useAttribute","className":"ModuleScript","filePaths":["src/vendor/Fusion/useAttribute.luau"]},{"name":"useProperty","className":"ModuleScript","filePaths":["src/vendor/Fusion/useProperty.luau"]}]},{"name":"InputModule","className":"ModuleScript","filePaths":["src/vendor/InputModule.luau"]},{"name":"SafePivotCharactersAsync","className":"ModuleScript","filePaths":["src/vendor/SafePivotCharactersAsync.luau"]}]}]},{"name":"ServerScriptService","className":"ServerScriptService","children":[{"name":"Packages","className":"Folder","children":[{"name":"ProfileStore","className":"ModuleScript","filePaths":["ServerPackages/ProfileStore.lua"]},{"name":"_Index","className":"Folder","children":[{"name":"2jammers_profilestore@0.1.0","className":"Folder","children":[{"name":"profilestore","className":"ModuleScript","filePaths":["ServerPackages/_Index/2jammers_profilestore@0.1.0/profilestore/ProfileStore.luau","ServerPackages/_Index/2jammers_profilestore@0.1.0/profilestore/default.project.json"]}]}]}]},{"name":"Server","className":"Folder","children":[{"name":"Core","className":"Folder","children":[{"name":"Config","className":"Folder","children":[{"name":"CoreStatesConfig","className":"ModuleScript","filePaths":["src/server/Core/Config/CoreStatesConfig.luau"]}]},{"name":"GameStateMachine","className":"Script","filePaths":["src/server/Core/GameStateMachine.server.luau"]},{"name":"Modules","className":"Folder","children":[{"name":"CleanUpMatch","className":"ModuleScript","filePaths":["src/server/Core/Modules/CleanUpMatch.luau"]},{"name":"GameContext","className":"ModuleScript","filePaths":["src/server/Core/Modules/GameContext.luau"]}]},{"name":"States","className":"Folder","children":[{"name":"InGameState","className":"Script","filePaths":["src/server/Core/States/InGameState.server.luau"]},{"name":"IntermissionState","className":"Script","filePaths":["src/server/Core/States/IntermissionState.server.luau"]}]}]},{"name":"Gamemodes","className":"Folder","children":[{"name":"Config","className":"Folder","children":[{"name":"ClassicGamemodeConfig","className":"ModuleScript","filePaths":["src/server/Gamemodes/Config/ClassicGamemodeConfig.luau"]}]},{"name":"Modules","className":"Folder","children":[{"name":"BindPlayerRemovalCleanup","className":"ModuleScript","filePaths":["src/server/Gamemodes/Modules/BindPlayerRemovalCleanup.luau"]},{"name":"CalculateKillerChance","className":"ModuleScript","filePaths":["src/server/Gamemodes/Modules/CalculateKillerChance.luau"]},{"name":"GetReadyPlayers","className":"ModuleScript","filePaths":["src/server/Gamemodes/Modules/GetReadyPlayers.luau"]},{"name":"InitMatchContext","className":"ModuleScript","filePaths":["src/server/Gamemodes/Modules/InitMatchContext.luau"]},{"name":"SanitizeMatchData","className":"ModuleScript","filePaths":["src/server/Gamemodes/Modules/SanitizeMatchData.luau"]},{"name":"TeleportPlayersToMap","className":"ModuleScript","filePaths":["src/server/Gamemodes/Modules/TeleportPlayersToMap.luau"]}]},{"name":"States","className":"Folder","children":[{"name":"Classic","className":"Folder","children":[{"name":"ClassicEnd","className":"Script","filePaths":["src/server/Gamemodes/States/Classic/ClassicEnd.server.luau"]},{"name":"ClassicPlay","className":"Script","filePaths":["src/server/Gamemodes/States/Classic/ClassicPlay.server.luau"]},{"name":"ClassicStart","className":"Script","filePaths":["src/server/Gamemodes/States/Classic/ClassicStart.server.luau"]}]}]}]},{"name":"Maps","className":"Folder","children":[{"name":"LoadMapHandler","className":"Script","filePaths":["src/server/Maps/LoadMapHandler.server.luau"]},{"name":"Modules","className":"Folder","children":[{"name":"GetRandomMap","className":"ModuleScript","filePaths":["src/server/Maps/Modules/GetRandomMap.luau"]}]},{"name":"Signals","className":"Folder","children":[{"name":"LoadMapSignal","className":"ModuleScript","filePaths":["src/server/Maps/Signals/LoadMapSignal.luau"]}]},{"name":"Values","className":"Folder","children":[{"name":"CurrentMap","className":"ModuleScript","filePaths":["src/server/Maps/Values/CurrentMap.luau"]}]}]},{"name":"Sounds","className":"Folder","children":[{"name":"SoundEventsHandler","className":"Script","filePaths":["src/server/Sounds/SoundEventsHandler.server.luau"]}]}]}]},{"name":"StarterPlayer","className":"StarterPlayer","children":[{"name":"StarterPlayerScripts","className":"StarterPlayerScripts","children":[{"name":"Client","className":"Folder","children":[{"name":"Animations","className":"Folder","children":[{"name":"Modules","className":"Folder","children":[{"name":"AnimationManager","className":"ModuleScript","filePaths":["src/client/Animations/Modules/AnimationManager.luau"]}]},{"name":"PreloadEveryAnimation","className":"LocalScript","filePaths":["src/client/Animations/PreloadEveryAnimation.client.luau"]}]},{"name":"Camera","className":"Folder","children":[{"name":"UpdateCameraFOV","className":"LocalScript","filePaths":["src/client/Camera/UpdateCameraFOV.client.luau"]}]},{"name":"Movement","className":"Folder","children":[{"name":"Config","className":"Folder","children":[{"name":"MovementConfig","className":"ModuleScript","filePaths":["src/client/Movement/Config/MovementConfig.luau"]}]},{"name":"CrouchInput","className":"LocalScript","filePaths":["src/client/Movement/CrouchInput.client.luau"]},{"name":"Modules","className":"Folder","children":[{"name":"MovementContext","className":"ModuleScript","filePaths":["src/client/Movement/Modules/MovementContext.luau"]},{"name":"PlayStepSound","className":"ModuleScript","filePaths":["src/client/Movement/Modules/PlayStepSound.luau"]},{"name":"StepWalkspeed","className":"ModuleScript","filePaths":["src/client/Movement/Modules/StepWalkspeed.luau"]},{"name":"TryStopMovingSuddenly","className":"ModuleScript","filePaths":["src/client/Movement/Modules/TryStopMovingSuddenly.luau"]}]},{"name":"MovementStateMachine","className":"LocalScript","filePaths":["src/client/Movement/MovementStateMachine.client.luau"]},{"name":"RunningInput","className":"LocalScript","filePaths":["src/client/Movement/RunningInput.client.luau"]},{"name":"Signals","className":"Folder","children":[{"name":"ForceMovementStateSignal","className":"ModuleScript","filePaths":["src/client/Movement/Signals/ForceMovementStateSignal.luau"]},{"name":"StartMachineSignal","className":"ModuleScript","filePaths":["src/client/Movement/Signals/StartMachineSignal.luau"]}]},{"name":"States","className":"Folder","children":[{"name":"IdleCrouchState","className":"LocalScript","filePaths":["src/client/Movement/States/IdleCrouchState.client.luau"]},{"name":"IdleState","className":"LocalScript","filePaths":["src/client/Movement/States/IdleState.client.luau"]},{"name":"RunState","className":"LocalScript","filePaths":["src/client/Movement/States/RunState.client.luau"]},{"name":"WalkCrouchState","className":"LocalScript","filePaths":["src/client/Movement/States/WalkCrouchState.client.luau"]},{"name":"WalkState","className":"LocalScript","filePaths":["src/client/Movement/States/WalkState.client.luau"]}]},{"name":"UpdateMovementContext","className":"LocalScript","filePaths":["src/client/Movement/UpdateMovementContext.client.luau"]},{"name":"Values","className":"Folder","children":[{"name":"MovementCurrentState","className":"ModuleScript","filePaths":["src/client/Movement/Values/MovementCurrentState.luau"]}]}]},{"name":"Sounds","className":"Folder","children":[{"name":"DisableDefaultSounds","className":"LocalScript","filePaths":["src/client/Sounds/DisableDefaultSounds.client.luau"]},{"name":"Modules","className":"Folder","children":[{"name":"PlaySound","className":"ModuleScript","filePaths":["src/client/Sounds/Modules/PlaySound.luau"]}]},{"name":"Signals","className":"Folder","children":[{"name":"PlaySoundSignal","className":"ModuleScript","filePaths":["src/client/Sounds/Signals/PlaySoundSignal.luau"]},{"name":"ReplicateSoundSignal","className":"ModuleScript","filePaths":["src/client/Sounds/Signals/ReplicateSoundSignal.luau"]}]},{"name":"SoundSignalsHandler","className":"LocalScript","filePaths":["src/client/Sounds/SoundSignalsHandler.client.luau"]}]},{"name":"Stamina","className":"Folder","children":[{"name":"Modules","className":"Folder","children":[{"name":"StaminaPresets","className":"ModuleScript","filePaths":["src/client/Stamina/Modules/StaminaPresets.luau"]},{"name":"StaminaService","className":"ModuleScript","filePaths":["src/client/Stamina/Modules/StaminaService.luau"]}]},{"name":"Signals","className":"Folder","children":[{"name":"AddStaminaModifier","className":"ModuleScript","filePaths":["src/client/Stamina/Signals/AddStaminaModifier.luau"]},{"name":"RemoveStaminaModifier","className":"ModuleScript","filePaths":["src/client/Stamina/Signals/RemoveStaminaModifier.luau"]}]},{"name":"StaminaHandler","className":"LocalScript","filePaths":["src/client/Stamina/StaminaHandler.client.luau"]}]},{"name":"UI","className":"Folder","children":[{"name":"StatsFrame","className":"LocalScript","filePaths":["src/client/UI/StatsFrame.client.luau"]}]},{"name":"Values","className":"Folder","children":[{"name":"StaminaValue","className":"ModuleScript","filePaths":["src/client/Values/StaminaValue.luau"]}]}]}]}]}]}
+{
+  "name": "Focksake",
+  "className": "DataModel",
+  "filePaths": [
+    "default.project.json"
+  ],
+  "children": [
+    {
+      "name": "ReplicatedStorage",
+      "className": "ReplicatedStorage",
+      "children": [
+        {
+          "name": "Packages",
+          "className": "Folder",
+          "children": [
+            {
+              "name": "Fusion",
+              "className": "ModuleScript",
+              "filePaths": [
+                "Packages/Fusion.lua"
+              ]
+            },
+            {
+              "name": "Janitor",
+              "className": "ModuleScript",
+              "filePaths": [
+                "Packages/Janitor.lua"
+              ]
+            },
+            {
+              "name": "Net",
+              "className": "ModuleScript",
+              "filePaths": [
+                "Packages/Net.lua"
+              ]
+            },
+            {
+              "name": "Observers",
+              "className": "ModuleScript",
+              "filePaths": [
+                "Packages/Observers.lua"
+              ]
+            },
+            {
+              "name": "Promise",
+              "className": "ModuleScript",
+              "filePaths": [
+                "Packages/Promise.lua"
+              ]
+            },
+            {
+              "name": "Signal",
+              "className": "ModuleScript",
+              "filePaths": [
+                "Packages/Signal.lua"
+              ]
+            },
+            {
+              "name": "_Index",
+              "className": "Folder",
+              "children": [
+                {
+                  "name": "elttob_fusion@0.3.0",
+                  "className": "Folder",
+                  "children": [
+                    {
+                      "name": "fusion",
+                      "className": "ModuleScript",
+                      "filePaths": [
+                        "Packages/_Index/elttob_fusion@0.3.0/fusion/src/init.luau",
+                        "Packages/_Index/elttob_fusion@0.3.0/fusion/default.project.json"
+                      ],
+                      "children": [
+                        {
+                          "name": "Animation",
+                          "className": "Folder",
+                          "children": [
+                            {
+                              "name": "ExternalTime",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Animation/ExternalTime.luau"
+                              ]
+                            },
+                            {
+                              "name": "Spring",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Animation/Spring.luau"
+                              ]
+                            },
+                            {
+                              "name": "Stopwatch",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Animation/Stopwatch.luau"
+                              ]
+                            },
+                            {
+                              "name": "Tween",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Animation/Tween.luau"
+                              ]
+                            },
+                            {
+                              "name": "getTweenDuration",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Animation/getTweenDuration.luau"
+                              ]
+                            },
+                            {
+                              "name": "getTweenRatio",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Animation/getTweenRatio.luau"
+                              ]
+                            },
+                            {
+                              "name": "lerpType",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Animation/lerpType.luau"
+                              ]
+                            },
+                            {
+                              "name": "packType",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Animation/packType.luau"
+                              ]
+                            },
+                            {
+                              "name": "springCoefficients",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Animation/springCoefficients.luau"
+                              ]
+                            },
+                            {
+                              "name": "unpackType",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Animation/unpackType.luau"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Colour",
+                          "className": "Folder",
+                          "children": [
+                            {
+                              "name": "Oklab",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Colour/Oklab.luau"
+                              ]
+                            },
+                            {
+                              "name": "sRGB",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Colour/sRGB.luau"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "External",
+                          "className": "ModuleScript",
+                          "filePaths": [
+                            "Packages/_Index/elttob_fusion@0.3.0/fusion/src/External.luau"
+                          ]
+                        },
+                        {
+                          "name": "ExternalDebug",
+                          "className": "ModuleScript",
+                          "filePaths": [
+                            "Packages/_Index/elttob_fusion@0.3.0/fusion/src/ExternalDebug.luau"
+                          ]
+                        },
+                        {
+                          "name": "Graph",
+                          "className": "Folder",
+                          "children": [
+                            {
+                              "name": "Observer",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Graph/Observer.luau"
+                              ]
+                            },
+                            {
+                              "name": "castToGraph",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Graph/castToGraph.luau"
+                              ]
+                            },
+                            {
+                              "name": "change",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Graph/change.luau"
+                              ]
+                            },
+                            {
+                              "name": "depend",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Graph/depend.luau"
+                              ]
+                            },
+                            {
+                              "name": "evaluate",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Graph/evaluate.luau"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Instances",
+                          "className": "Folder",
+                          "children": [
+                            {
+                              "name": "Attribute",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Instances/Attribute.luau"
+                              ]
+                            },
+                            {
+                              "name": "AttributeChange",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Instances/AttributeChange.luau"
+                              ]
+                            },
+                            {
+                              "name": "AttributeOut",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Instances/AttributeOut.luau"
+                              ]
+                            },
+                            {
+                              "name": "Child",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Instances/Child.luau"
+                              ]
+                            },
+                            {
+                              "name": "Children",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Instances/Children.luau"
+                              ]
+                            },
+                            {
+                              "name": "Hydrate",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Instances/Hydrate.luau"
+                              ]
+                            },
+                            {
+                              "name": "New",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Instances/New.luau"
+                              ]
+                            },
+                            {
+                              "name": "OnChange",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Instances/OnChange.luau"
+                              ]
+                            },
+                            {
+                              "name": "OnEvent",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Instances/OnEvent.luau"
+                              ]
+                            },
+                            {
+                              "name": "Out",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Instances/Out.luau"
+                              ]
+                            },
+                            {
+                              "name": "applyInstanceProps",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Instances/applyInstanceProps.luau"
+                              ]
+                            },
+                            {
+                              "name": "defaultProps",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Instances/defaultProps.luau"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Logging",
+                          "className": "Folder",
+                          "children": [
+                            {
+                              "name": "formatError",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Logging/formatError.luau"
+                              ]
+                            },
+                            {
+                              "name": "messages",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Logging/messages.luau"
+                              ]
+                            },
+                            {
+                              "name": "parseError",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Logging/parseError.luau"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Memory",
+                          "className": "Folder",
+                          "children": [
+                            {
+                              "name": "checkLifetime",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Memory/checkLifetime.luau"
+                              ]
+                            },
+                            {
+                              "name": "deriveScope",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Memory/deriveScope.luau"
+                              ]
+                            },
+                            {
+                              "name": "deriveScopeImpl",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Memory/deriveScopeImpl.luau"
+                              ]
+                            },
+                            {
+                              "name": "doCleanup",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Memory/doCleanup.luau"
+                              ]
+                            },
+                            {
+                              "name": "innerScope",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Memory/innerScope.luau"
+                              ]
+                            },
+                            {
+                              "name": "legacyCleanup",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Memory/legacyCleanup.luau"
+                              ]
+                            },
+                            {
+                              "name": "needsDestruction",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Memory/needsDestruction.luau"
+                              ]
+                            },
+                            {
+                              "name": "poisonScope",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Memory/poisonScope.luau"
+                              ]
+                            },
+                            {
+                              "name": "scopePool",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Memory/scopePool.luau"
+                              ]
+                            },
+                            {
+                              "name": "scoped",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Memory/scoped.luau"
+                              ]
+                            },
+                            {
+                              "name": "whichLivesLonger",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Memory/whichLivesLonger.luau"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "RobloxExternal",
+                          "className": "ModuleScript",
+                          "filePaths": [
+                            "Packages/_Index/elttob_fusion@0.3.0/fusion/src/RobloxExternal.luau"
+                          ]
+                        },
+                        {
+                          "name": "State",
+                          "className": "Folder",
+                          "children": [
+                            {
+                              "name": "Computed",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/State/Computed.luau"
+                              ]
+                            },
+                            {
+                              "name": "For",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/State/For/init.luau"
+                              ],
+                              "children": [
+                                {
+                                  "name": "Disassembly",
+                                  "className": "ModuleScript",
+                                  "filePaths": [
+                                    "Packages/_Index/elttob_fusion@0.3.0/fusion/src/State/For/Disassembly.luau"
+                                  ]
+                                },
+                                {
+                                  "name": "ForTypes",
+                                  "className": "ModuleScript",
+                                  "filePaths": [
+                                    "Packages/_Index/elttob_fusion@0.3.0/fusion/src/State/For/ForTypes.luau"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "ForKeys",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/State/ForKeys.luau"
+                              ]
+                            },
+                            {
+                              "name": "ForPairs",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/State/ForPairs.luau"
+                              ]
+                            },
+                            {
+                              "name": "ForValues",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/State/ForValues.luau"
+                              ]
+                            },
+                            {
+                              "name": "Value",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/State/Value.luau"
+                              ]
+                            },
+                            {
+                              "name": "castToState",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/State/castToState.luau"
+                              ]
+                            },
+                            {
+                              "name": "peek",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/State/peek.luau"
+                              ]
+                            },
+                            {
+                              "name": "updateAll",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/State/updateAll.luau"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Types",
+                          "className": "ModuleScript",
+                          "filePaths": [
+                            "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Types.luau"
+                          ]
+                        },
+                        {
+                          "name": "Utility",
+                          "className": "Folder",
+                          "children": [
+                            {
+                              "name": "Contextual",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Utility/Contextual.luau"
+                              ]
+                            },
+                            {
+                              "name": "Safe",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Utility/Safe.luau"
+                              ]
+                            },
+                            {
+                              "name": "isSimilar",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Utility/isSimilar.luau"
+                              ]
+                            },
+                            {
+                              "name": "merge",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Utility/merge.luau"
+                              ]
+                            },
+                            {
+                              "name": "nameOf",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Utility/nameOf.luau"
+                              ]
+                            },
+                            {
+                              "name": "never",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Utility/never.luau"
+                              ]
+                            },
+                            {
+                              "name": "nicknames",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Utility/nicknames.luau"
+                              ]
+                            },
+                            {
+                              "name": "xtypeof",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/elttob_fusion@0.3.0/fusion/src/Utility/xtypeof.luau"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "evaera_promise@4.0.0",
+                  "className": "Folder",
+                  "children": [
+                    {
+                      "name": "promise",
+                      "className": "ModuleScript",
+                      "filePaths": [
+                        "Packages/_Index/evaera_promise@4.0.0/promise/lib/init.lua",
+                        "Packages/_Index/evaera_promise@4.0.0/promise/default.project.json"
+                      ],
+                      "children": [
+                        {
+                          "name": "init.spec",
+                          "className": "ModuleScript",
+                          "filePaths": [
+                            "Packages/_Index/evaera_promise@4.0.0/promise/lib/init.spec.lua"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "howmanysmall_janitor@1.18.3",
+                  "className": "Folder",
+                  "children": [
+                    {
+                      "name": "Promise",
+                      "className": "ModuleScript",
+                      "filePaths": [
+                        "Packages/_Index/howmanysmall_janitor@1.18.3/Promise.lua"
+                      ]
+                    },
+                    {
+                      "name": "janitor",
+                      "className": "ModuleScript",
+                      "filePaths": [
+                        "Packages/_Index/howmanysmall_janitor@1.18.3/janitor/src/init.luau",
+                        "Packages/_Index/howmanysmall_janitor@1.18.3/janitor/default.project.json"
+                      ],
+                      "children": [
+                        {
+                          "name": "FastDefer",
+                          "className": "ModuleScript",
+                          "filePaths": [
+                            "Packages/_Index/howmanysmall_janitor@1.18.3/janitor/src/FastDefer.luau"
+                          ]
+                        },
+                        {
+                          "name": "Promise",
+                          "className": "ModuleScript",
+                          "filePaths": [
+                            "Packages/_Index/howmanysmall_janitor@1.18.3/janitor/src/Promise.luau"
+                          ]
+                        },
+                        {
+                          "name": "__tests__",
+                          "className": "Folder",
+                          "children": [
+                            {
+                              "name": "Janitor.test",
+                              "className": "ModuleScript",
+                              "filePaths": [
+                                "Packages/_Index/howmanysmall_janitor@1.18.3/janitor/src/__tests__/Janitor.test.luau"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "jest.config",
+                          "className": "ModuleScript",
+                          "filePaths": [
+                            "Packages/_Index/howmanysmall_janitor@1.18.3/janitor/src/jest.config.luau"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "howmanysmall_typed-promise@4.0.6",
+                  "className": "Folder",
+                  "children": [
+                    {
+                      "name": "Promise",
+                      "className": "ModuleScript",
+                      "filePaths": [
+                        "Packages/_Index/howmanysmall_typed-promise@4.0.6/Promise.lua"
+                      ]
+                    },
+                    {
+                      "name": "typed-promise",
+                      "className": "ModuleScript",
+                      "filePaths": [
+                        "Packages/_Index/howmanysmall_typed-promise@4.0.6/typed-promise/src/init.luau",
+                        "Packages/_Index/howmanysmall_typed-promise@4.0.6/typed-promise/default.project.json"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "sleitnick_net@0.2.0",
+                  "className": "Folder",
+                  "children": [
+                    {
+                      "name": "net",
+                      "className": "ModuleScript",
+                      "filePaths": [
+                        "Packages/_Index/sleitnick_net@0.2.0/net/init.lua"
+                      ],
+                      "children": [
+                        {
+                          "name": "wally",
+                          "className": "ModuleScript",
+                          "filePaths": [
+                            "Packages/_Index/sleitnick_net@0.2.0/net/wally.toml"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "sleitnick_observers@0.4.0",
+                  "className": "Folder",
+                  "children": [
+                    {
+                      "name": "observers",
+                      "className": "ModuleScript",
+                      "filePaths": [
+                        "Packages/_Index/sleitnick_observers@0.4.0/observers/lib/init.luau",
+                        "Packages/_Index/sleitnick_observers@0.4.0/observers/default.project.json"
+                      ],
+                      "children": [
+                        {
+                          "name": "observeAttribute",
+                          "className": "ModuleScript",
+                          "filePaths": [
+                            "Packages/_Index/sleitnick_observers@0.4.0/observers/lib/observeAttribute.luau"
+                          ]
+                        },
+                        {
+                          "name": "observeCharacter",
+                          "className": "ModuleScript",
+                          "filePaths": [
+                            "Packages/_Index/sleitnick_observers@0.4.0/observers/lib/observeCharacter.luau"
+                          ]
+                        },
+                        {
+                          "name": "observeLocalCharacter",
+                          "className": "ModuleScript",
+                          "filePaths": [
+                            "Packages/_Index/sleitnick_observers@0.4.0/observers/lib/observeLocalCharacter.luau"
+                          ]
+                        },
+                        {
+                          "name": "observePlayer",
+                          "className": "ModuleScript",
+                          "filePaths": [
+                            "Packages/_Index/sleitnick_observers@0.4.0/observers/lib/observePlayer.luau"
+                          ]
+                        },
+                        {
+                          "name": "observeProperty",
+                          "className": "ModuleScript",
+                          "filePaths": [
+                            "Packages/_Index/sleitnick_observers@0.4.0/observers/lib/observeProperty.luau"
+                          ]
+                        },
+                        {
+                          "name": "observeTag",
+                          "className": "ModuleScript",
+                          "filePaths": [
+                            "Packages/_Index/sleitnick_observers@0.4.0/observers/lib/observeTag.luau"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "sleitnick_signal@2.0.3",
+                  "className": "Folder",
+                  "children": [
+                    {
+                      "name": "signal",
+                      "className": "ModuleScript",
+                      "filePaths": [
+                        "Packages/_Index/sleitnick_signal@2.0.3/signal/init.luau"
+                      ],
+                      "children": [
+                        {
+                          "name": "init.test",
+                          "className": "ModuleScript",
+                          "filePaths": [
+                            "Packages/_Index/sleitnick_signal@2.0.3/signal/init.test.luau"
+                          ]
+                        },
+                        {
+                          "name": "wally",
+                          "className": "ModuleScript",
+                          "filePaths": [
+                            "Packages/_Index/sleitnick_signal@2.0.3/signal/wally.toml"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Shared",
+          "className": "Folder",
+          "children": [
+            {
+              "name": "Enums",
+              "className": "Folder",
+              "children": [
+                {
+                  "name": "PromptsEnums",
+                  "className": "ModuleScript",
+                  "filePaths": [
+                    "src/shared/Enums/PromptsEnums.luau"
+                  ]
+                },
+                {
+                  "name": "InteractableEnums",
+                  "className": "ModuleScript",
+                  "filePaths": [
+                    "src/shared/Enums/InteractableEnums.luau"
+                  ]
+                },
+                {
+                  "name": "SpawnsEnums",
+                  "className": "ModuleScript",
+                  "filePaths": [
+                    "src/shared/Enums/SpawnsEnums.luau"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Util",
+              "className": "Folder",
+              "children": [
+                {
+                  "name": "StateMachine",
+                  "className": "ModuleScript",
+                  "filePaths": [
+                    "src/shared/Util/StateMachine.luau"
+                  ]
+                },
+                {
+                  "name": "StatesRegistry",
+                  "className": "ModuleScript",
+                  "filePaths": [
+                    "src/shared/Util/StatesRegistry.luau"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Vendor",
+          "className": "Folder",
+          "children": [
+            {
+              "name": "Fusion",
+              "className": "Folder",
+              "children": [
+                {
+                  "name": "trackValues",
+                  "className": "ModuleScript",
+                  "filePaths": [
+                    "src/vendor/Fusion/trackValues.luau"
+                  ]
+                },
+                {
+                  "name": "useAttribute",
+                  "className": "ModuleScript",
+                  "filePaths": [
+                    "src/vendor/Fusion/useAttribute.luau"
+                  ]
+                },
+                {
+                  "name": "useProperty",
+                  "className": "ModuleScript",
+                  "filePaths": [
+                    "src/vendor/Fusion/useProperty.luau"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "InputModule",
+              "className": "ModuleScript",
+              "filePaths": [
+                "src/vendor/InputModule.luau"
+              ]
+            },
+            {
+              "name": "SafePivotCharactersAsync",
+              "className": "ModuleScript",
+              "filePaths": [
+                "src/vendor/SafePivotCharactersAsync.luau"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ServerScriptService",
+      "className": "ServerScriptService",
+      "children": [
+        {
+          "name": "Packages",
+          "className": "Folder",
+          "children": [
+            {
+              "name": "ProfileStore",
+              "className": "ModuleScript",
+              "filePaths": [
+                "ServerPackages/ProfileStore.lua"
+              ]
+            },
+            {
+              "name": "_Index",
+              "className": "Folder",
+              "children": [
+                {
+                  "name": "2jammers_profilestore@0.1.0",
+                  "className": "Folder",
+                  "children": [
+                    {
+                      "name": "profilestore",
+                      "className": "ModuleScript",
+                      "filePaths": [
+                        "ServerPackages/_Index/2jammers_profilestore@0.1.0/profilestore/ProfileStore.luau",
+                        "ServerPackages/_Index/2jammers_profilestore@0.1.0/profilestore/default.project.json"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Server",
+          "className": "Folder",
+          "children": [
+            {
+              "name": "Chests",
+              "className": "Folder",
+              "children": [
+                {
+                  "name": "InitChestSignals",
+                  "className": "Script",
+                  "filePaths": [
+                    "src/server/Chests/InitChestSignals.server.luau"
+                  ]
+                },
+                {
+                  "name": "Modules",
+                  "className": "Folder",
+                  "children": [
+                    {
+                      "name": "ChestsManager",
+                      "className": "ModuleScript",
+                      "filePaths": [
+                        "src/server/Chests/Modules/ChestsManager.luau"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Signals",
+                  "className": "Folder",
+                  "children": [
+                    {
+                      "name": "CreateChestSignal",
+                      "className": "ModuleScript",
+                      "filePaths": [
+                        "src/server/Chests/Signals/CreateChestSignal.luau"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Core",
+              "className": "Folder",
+              "children": [
+                {
+                  "name": "Config",
+                  "className": "Folder",
+                  "children": [
+                    {
+                      "name": "CoreStatesConfig",
+                      "className": "ModuleScript",
+                      "filePaths": [
+                        "src/server/Core/Config/CoreStatesConfig.luau"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "GameStateMachine",
+                  "className": "Script",
+                  "filePaths": [
+                    "src/server/Core/GameStateMachine.server.luau"
+                  ]
+                },
+                {
+                  "name": "Modules",
+                  "className": "Folder",
+                  "children": [
+                    {
+                      "name": "CleanUpMatch",
+                      "className": "ModuleScript",
+                      "filePaths": [
+                        "src/server/Core/Modules/CleanUpMatch.luau"
+                      ]
+                    },
+                    {
+                      "name": "GameContext",
+                      "className": "ModuleScript",
+                      "filePaths": [
+                        "src/server/Core/Modules/GameContext.luau"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "States",
+                  "className": "Folder",
+                  "children": [
+                    {
+                      "name": "InGameState",
+                      "className": "Script",
+                      "filePaths": [
+                        "src/server/Core/States/InGameState.server.luau"
+                      ]
+                    },
+                    {
+                      "name": "IntermissionState",
+                      "className": "Script",
+                      "filePaths": [
+                        "src/server/Core/States/IntermissionState.server.luau"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Gamemodes",
+              "className": "Folder",
+              "children": [
+                {
+                  "name": "Config",
+                  "className": "Folder",
+                  "children": [
+                    {
+                      "name": "ClassicGamemodeConfig",
+                      "className": "ModuleScript",
+                      "filePaths": [
+                        "src/server/Gamemodes/Config/ClassicGamemodeConfig.luau"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Modules",
+                  "className": "Folder",
+                  "children": [
+                    {
+                      "name": "BindPlayerRemovalCleanup",
+                      "className": "ModuleScript",
+                      "filePaths": [
+                        "src/server/Gamemodes/Modules/BindPlayerRemovalCleanup.luau"
+                      ]
+                    },
+                    {
+                      "name": "CalculateKillerChance",
+                      "className": "ModuleScript",
+                      "filePaths": [
+                        "src/server/Gamemodes/Modules/CalculateKillerChance.luau"
+                      ]
+                    },
+                    {
+                      "name": "GetReadyPlayers",
+                      "className": "ModuleScript",
+                      "filePaths": [
+                        "src/server/Gamemodes/Modules/GetReadyPlayers.luau"
+                      ]
+                    },
+                    {
+                      "name": "InitMatchContext",
+                      "className": "ModuleScript",
+                      "filePaths": [
+                        "src/server/Gamemodes/Modules/InitMatchContext.luau"
+                      ]
+                    },
+                    {
+                      "name": "SanitizeMatchData",
+                      "className": "ModuleScript",
+                      "filePaths": [
+                        "src/server/Gamemodes/Modules/SanitizeMatchData.luau"
+                      ]
+                    },
+                    {
+                      "name": "TeleportPlayersToMap",
+                      "className": "ModuleScript",
+                      "filePaths": [
+                        "src/server/Gamemodes/Modules/TeleportPlayersToMap.luau"
+                      ]
+                    },
+                    {
+                      "name": "InitMapChests",
+                      "className": "ModuleScript",
+                      "filePaths": [
+                        "src/server/Gamemodes/Modules/InitMapChests.luau"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "States",
+                  "className": "Folder",
+                  "children": [
+                    {
+                      "name": "Classic",
+                      "className": "Folder",
+                      "children": [
+                        {
+                          "name": "ClassicEnd",
+                          "className": "Script",
+                          "filePaths": [
+                            "src/server/Gamemodes/States/Classic/ClassicEnd.server.luau"
+                          ]
+                        },
+                        {
+                          "name": "ClassicPlay",
+                          "className": "Script",
+                          "filePaths": [
+                            "src/server/Gamemodes/States/Classic/ClassicPlay.server.luau"
+                          ]
+                        },
+                        {
+                          "name": "ClassicStart",
+                          "className": "Script",
+                          "filePaths": [
+                            "src/server/Gamemodes/States/Classic/ClassicStart.server.luau"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Maps",
+              "className": "Folder",
+              "children": [
+                {
+                  "name": "LoadMapHandler",
+                  "className": "Script",
+                  "filePaths": [
+                    "src/server/Maps/LoadMapHandler.server.luau"
+                  ]
+                },
+                {
+                  "name": "Modules",
+                  "className": "Folder",
+                  "children": [
+                    {
+                      "name": "GetRandomMap",
+                      "className": "ModuleScript",
+                      "filePaths": [
+                        "src/server/Maps/Modules/GetRandomMap.luau"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Signals",
+                  "className": "Folder",
+                  "children": [
+                    {
+                      "name": "LoadMapSignal",
+                      "className": "ModuleScript",
+                      "filePaths": [
+                        "src/server/Maps/Signals/LoadMapSignal.luau"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Values",
+                  "className": "Folder",
+                  "children": [
+                    {
+                      "name": "CurrentMap",
+                      "className": "ModuleScript",
+                      "filePaths": [
+                        "src/server/Maps/Values/CurrentMap.luau"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Sounds",
+              "className": "Folder",
+              "children": [
+                {
+                  "name": "SoundEventsHandler",
+                  "className": "Script",
+                  "filePaths": [
+                    "src/server/Sounds/SoundEventsHandler.server.luau"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "StarterPlayer",
+      "className": "StarterPlayer",
+      "children": [
+        {
+          "name": "StarterPlayerScripts",
+          "className": "StarterPlayerScripts",
+          "children": [
+            {
+              "name": "Client",
+              "className": "Folder",
+              "children": [
+                {
+                  "name": "Animations",
+                  "className": "Folder",
+                  "children": [
+                    {
+                      "name": "Modules",
+                      "className": "Folder",
+                      "children": [
+                        {
+                          "name": "AnimationManager",
+                          "className": "ModuleScript",
+                          "filePaths": [
+                            "src/client/Animations/Modules/AnimationManager.luau"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "PreloadEveryAnimation",
+                      "className": "LocalScript",
+                      "filePaths": [
+                        "src/client/Animations/PreloadEveryAnimation.client.luau"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Camera",
+                  "className": "Folder",
+                  "children": [
+                    {
+                      "name": "UpdateCameraFOV",
+                      "className": "LocalScript",
+                      "filePaths": [
+                        "src/client/Camera/UpdateCameraFOV.client.luau"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Movement",
+                  "className": "Folder",
+                  "children": [
+                    {
+                      "name": "Config",
+                      "className": "Folder",
+                      "children": [
+                        {
+                          "name": "MovementConfig",
+                          "className": "ModuleScript",
+                          "filePaths": [
+                            "src/client/Movement/Config/MovementConfig.luau"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "CrouchInput",
+                      "className": "LocalScript",
+                      "filePaths": [
+                        "src/client/Movement/CrouchInput.client.luau"
+                      ]
+                    },
+                    {
+                      "name": "Modules",
+                      "className": "Folder",
+                      "children": [
+                        {
+                          "name": "MovementContext",
+                          "className": "ModuleScript",
+                          "filePaths": [
+                            "src/client/Movement/Modules/MovementContext.luau"
+                          ]
+                        },
+                        {
+                          "name": "PlayStepSound",
+                          "className": "ModuleScript",
+                          "filePaths": [
+                            "src/client/Movement/Modules/PlayStepSound.luau"
+                          ]
+                        },
+                        {
+                          "name": "StepWalkspeed",
+                          "className": "ModuleScript",
+                          "filePaths": [
+                            "src/client/Movement/Modules/StepWalkspeed.luau"
+                          ]
+                        },
+                        {
+                          "name": "TryStopMovingSuddenly",
+                          "className": "ModuleScript",
+                          "filePaths": [
+                            "src/client/Movement/Modules/TryStopMovingSuddenly.luau"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "MovementStateMachine",
+                      "className": "LocalScript",
+                      "filePaths": [
+                        "src/client/Movement/MovementStateMachine.client.luau"
+                      ]
+                    },
+                    {
+                      "name": "RunningInput",
+                      "className": "LocalScript",
+                      "filePaths": [
+                        "src/client/Movement/RunningInput.client.luau"
+                      ]
+                    },
+                    {
+                      "name": "Signals",
+                      "className": "Folder",
+                      "children": [
+                        {
+                          "name": "ForceMovementStateSignal",
+                          "className": "ModuleScript",
+                          "filePaths": [
+                            "src/client/Movement/Signals/ForceMovementStateSignal.luau"
+                          ]
+                        },
+                        {
+                          "name": "StartMachineSignal",
+                          "className": "ModuleScript",
+                          "filePaths": [
+                            "src/client/Movement/Signals/StartMachineSignal.luau"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "States",
+                      "className": "Folder",
+                      "children": [
+                        {
+                          "name": "IdleCrouchState",
+                          "className": "LocalScript",
+                          "filePaths": [
+                            "src/client/Movement/States/IdleCrouchState.client.luau"
+                          ]
+                        },
+                        {
+                          "name": "IdleState",
+                          "className": "LocalScript",
+                          "filePaths": [
+                            "src/client/Movement/States/IdleState.client.luau"
+                          ]
+                        },
+                        {
+                          "name": "RunState",
+                          "className": "LocalScript",
+                          "filePaths": [
+                            "src/client/Movement/States/RunState.client.luau"
+                          ]
+                        },
+                        {
+                          "name": "WalkCrouchState",
+                          "className": "LocalScript",
+                          "filePaths": [
+                            "src/client/Movement/States/WalkCrouchState.client.luau"
+                          ]
+                        },
+                        {
+                          "name": "WalkState",
+                          "className": "LocalScript",
+                          "filePaths": [
+                            "src/client/Movement/States/WalkState.client.luau"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "UpdateMovementContext",
+                      "className": "LocalScript",
+                      "filePaths": [
+                        "src/client/Movement/UpdateMovementContext.client.luau"
+                      ]
+                    },
+                    {
+                      "name": "Values",
+                      "className": "Folder",
+                      "children": [
+                        {
+                          "name": "MovementCurrentState",
+                          "className": "ModuleScript",
+                          "filePaths": [
+                            "src/client/Movement/Values/MovementCurrentState.luau"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "ProximityPrompts",
+                  "className": "Folder",
+                  "children": [
+                    {
+                      "name": "ChestProximityPrompts",
+                      "className": "LocalScript",
+                      "filePaths": [
+                        "src/client/ProximityPrompts/ChestProximityPrompts.client.luau"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Sounds",
+                  "className": "Folder",
+                  "children": [
+                    {
+                      "name": "DisableDefaultSounds",
+                      "className": "LocalScript",
+                      "filePaths": [
+                        "src/client/Sounds/DisableDefaultSounds.client.luau"
+                      ]
+                    },
+                    {
+                      "name": "Modules",
+                      "className": "Folder",
+                      "children": [
+                        {
+                          "name": "PlaySound",
+                          "className": "ModuleScript",
+                          "filePaths": [
+                            "src/client/Sounds/Modules/PlaySound.luau"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Signals",
+                      "className": "Folder",
+                      "children": [
+                        {
+                          "name": "PlaySoundSignal",
+                          "className": "ModuleScript",
+                          "filePaths": [
+                            "src/client/Sounds/Signals/PlaySoundSignal.luau"
+                          ]
+                        },
+                        {
+                          "name": "ReplicateSoundSignal",
+                          "className": "ModuleScript",
+                          "filePaths": [
+                            "src/client/Sounds/Signals/ReplicateSoundSignal.luau"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "SoundSignalsHandler",
+                      "className": "LocalScript",
+                      "filePaths": [
+                        "src/client/Sounds/SoundSignalsHandler.client.luau"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Stamina",
+                  "className": "Folder",
+                  "children": [
+                    {
+                      "name": "Modules",
+                      "className": "Folder",
+                      "children": [
+                        {
+                          "name": "StaminaPresets",
+                          "className": "ModuleScript",
+                          "filePaths": [
+                            "src/client/Stamina/Modules/StaminaPresets.luau"
+                          ]
+                        },
+                        {
+                          "name": "StaminaService",
+                          "className": "ModuleScript",
+                          "filePaths": [
+                            "src/client/Stamina/Modules/StaminaService.luau"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Signals",
+                      "className": "Folder",
+                      "children": [
+                        {
+                          "name": "AddStaminaModifier",
+                          "className": "ModuleScript",
+                          "filePaths": [
+                            "src/client/Stamina/Signals/AddStaminaModifier.luau"
+                          ]
+                        },
+                        {
+                          "name": "RemoveStaminaModifier",
+                          "className": "ModuleScript",
+                          "filePaths": [
+                            "src/client/Stamina/Signals/RemoveStaminaModifier.luau"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "StaminaHandler",
+                      "className": "LocalScript",
+                      "filePaths": [
+                        "src/client/Stamina/StaminaHandler.client.luau"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "UI",
+                  "className": "Folder",
+                  "children": [
+                    {
+                      "name": "Extras",
+                      "className": "Folder",
+                      "children": [
+                        {
+                          "name": "PageAnimations",
+                          "className": "ModuleScript",
+                          "filePaths": [
+                            "src/client/UI/Extras/PageAnimations.luau"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "StatsFrame",
+                      "className": "LocalScript",
+                      "filePaths": [
+                        "src/client/UI/StatsFrame.client.luau"
+                      ]
+                    },
+                    {
+                      "name": "Test",
+                      "className": "LocalScript",
+                      "filePaths": [
+                        "src/client/UI/Test.client.luau"
+                      ]
+                    },
+                    {
+                      "name": "Values",
+                      "className": "Folder",
+                      "children": [
+                        {
+                          "name": "UIPageValue",
+                          "className": "ModuleScript",
+                          "filePaths": [
+                            "src/client/UI/Values/UIPageValue.luau"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "SkillCheckUI",
+                      "className": "LocalScript",
+                      "filePaths": [
+                        "src/client/UI/SkillCheckUI.client.luau"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Values",
+                  "className": "Folder",
+                  "children": [
+                    {
+                      "name": "StaminaValue",
+                      "className": "ModuleScript",
+                      "filePaths": [
+                        "src/client/Values/StaminaValue.luau"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Chests",
+                  "className": "Folder",
+                  "children": [
+                    {
+                      "name": "InitChestAnimations",
+                      "className": "LocalScript",
+                      "filePaths": [
+                        "src/client/Chests/InitChestAnimations.client.luau"
+                      ]
+                    },
+                    {
+                      "name": "StartOpeningChestEvent",
+                      "className": "LocalScript",
+                      "filePaths": [
+                        "src/client/Chests/StartOpeningChestEvent.client.luau"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

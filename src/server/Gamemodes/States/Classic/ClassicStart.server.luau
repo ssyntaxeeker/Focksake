@@ -4,6 +4,7 @@ local ServerScriptService = game:GetService("ServerScriptService")
 local BindPlayerRemovalCleanup = require(ServerScriptService.Server.Gamemodes.Modules.BindPlayerRemovalCleanup)
 local ClassicGamemodeConfig = require(ServerScriptService.Server.Gamemodes.Config.ClassicGamemodeConfig)
 local GetRandomMap = require(ServerScriptService.Server.Maps.Modules.GetRandomMap)
+local InitMapChests = require(ServerScriptService.Server.Gamemodes.Modules.InitMapChests)
 local InitMatchContext = require(ServerScriptService.Server.Gamemodes.Modules.InitMatchContext)
 local LoadMapSignal = require(ServerScriptService.Server.Maps.Signals.LoadMapSignal)
 local TeleportPlayersToMap = require(ServerScriptService.Server.Gamemodes.Modules.TeleportPlayersToMap)
@@ -21,6 +22,8 @@ local state = {
 
 		local chosenMap = GetRandomMap()
 		LoadMapSignal:Fire(chosenMap)
+
+		InitMapChests(ctx)
 
 		task.wait(0.5) -- wait 1/2 second because erm I don't see why not tbh just helps players screen have time to fade in.
 		-- also this is safe cause Play is only gonna start when matchStarted is true
